@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Simple Dictionary</string>
+    <string name="search_bar">write a word...</string>
+    <string name="search_btn">search</string>
+    <string name="definitions">Definitions:</string>
+    <string name="synonyms">Synonyms:</string>
+    <string name="antonyms">Antonyms:</string>
+</resources>

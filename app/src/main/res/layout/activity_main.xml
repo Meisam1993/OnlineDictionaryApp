@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="12dp"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <EditText
+            android:id="@+id/search_input_et"
+            android:layout_width="0dp"
+            android:layout_height="42dp"
+            android:layout_marginEnd="12dp"
+            android:background="@drawable/corner_background"
+            android:ellipsize="end"
+            android:hint="@string/search_bar"
+            android:maxLines="1"
+            android:minLines="1"
+            android:paddingStart="12dp"
+            android:textSize="12sp"
+            app:layout_constraintBottom_toBottomOf="@id/search_btn"
+            app:layout_constraintEnd_toStartOf="@id/search_btn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/search_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/search_btn"
+            android:textSize="12sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ProgressBar
+            android:id="@+id/search_progressBar"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:indeterminateTint="?colorPrimary"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@id/search_btn"
+            app:layout_constraintEnd_toEndOf="@id/search_btn"
+            app:layout_constraintStart_toStartOf="@id/search_btn"
+            app:layout_constraintTop_toTopOf="@id/search_btn" />
+
+        <TextView
+            android:id="@+id/word_searched"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginTop="12dp"
+            android:textColor="@color/blue"
+            android:textSize="24sp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/search_input_et"
+            tools:text="word searched" />
+
+        <TextView
+            android:id="@+id/phonetic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/grey"
+            android:textSize="12sp"
+            app:layout_constraintStart_toStartOf="@id/word_searched"
+            app:layout_constraintTop_toBottomOf="@id/word_searched"
+            tools:text="phonetic" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvMain"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/phonetic" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
